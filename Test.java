@@ -23,13 +23,19 @@ class Test {
     // new Random().nextInt(10)の表記は０から１０未満の整数がランダムで生成なので、
     // +1して１〜１０がランダムに選ばれるように設定
     Integer correct_answer = new Random().nextInt(10) + 1;
+    Integer count = 0;
 
     while (true) {
       System.out.println("Ok " + name + ". Now, can you guess the correct number?");
       Integer number = new Scanner(System.in).nextInt();
+      count++;
     
       if (correct_answer == number) {
-        System.out.println("Bingo! You did it!");
+        if (count <= 3) {
+          System.out.println("Bingo! You did it! It took just " + count + " guesses! You are amazing!");
+        } else {
+          System.out.println("Bingo! You did it! It took " + count + " guesses!");
+        }
         break;
       } else if (correct_answer > number) {
         System.out.println("Your number is " + number + ", isn't it? The correct number is bigger.");
