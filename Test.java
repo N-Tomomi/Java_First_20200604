@@ -1,5 +1,8 @@
 // Test.java
 
+// ファイルの先頭でimport文　import java.util.*;　
+// これでjava.utilパッケージを利用することを宣言
+
 // Scannerを使うための読み込み
 import java.util.Scanner;
 // ランダムな数値を使うための読み込み
